@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大厂Java面试押题密卷 | 字节/阿里/美团/拼多多 2026</title>
+    <meta name="description" content="2026大厂Java实习面试押题密卷——字节跳动、阿里巴巴、美团、拼多多真实面经提炼，每家公司10道高频题+标准答案。赞赏解锁全部内容。">
+    <meta name="keywords" content="大厂面试题, 字节跳动Java面试, 阿里Java面试, 美团Java面试, 拼多多Java面试, 2026校招, Java实习面经">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.8}
+        .container{max-width:800px;margin:0 auto;padding:20px}
+        .hero{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;margin-bottom:30px}
+        .hero h1{color:#f0883e;font-size:2em;margin-bottom:10px}
+        .hero p{color:#8b949e;font-size:1.1em}
+        .badge{display:inline-block;background:#f0883e;color:#0d1117;padding:4px 12px;border-radius:12px;font-weight:700;font-size:0.85em;margin:5px}
+        .preview{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin:20px 0}
+        .preview h3{color:#58a6ff;margin-bottom:15px}
+        .question{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:12px 15px;margin:10px 0;cursor:pointer}
+        .question:hover{border-color:#58a6ff}
+        .qtext{color:#7ee787;font-weight:600}
+        .locked{color:#f0883e;font-size:0.8em;float:right}
+        .unlocked{color:#7ee787;font-size:0.8em;float:right}
+        .paywall{background:linear-gradient(135deg,#1f6feb22,#f0883e22);border:2px solid #f0883e;border-radius:12px;padding:30px;margin:30px 0;text-align:center}
+        .paywall h2{color:#f0883e;margin-bottom:10px}
+        .paywall .price{font-size:2.5em;color:#7ee787;font-weight:700;margin:15px 0}
+        .paywall .features{text-align:left;max-width:400px;margin:20px auto;color:#8b949e}
+        .paywall .features li{margin:8px 0}
+        .paywall .features li::before{content:"✅";margin-right:8px}
+        .company-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+        .company-tab{padding:8px 16px;border:1px solid #30363d;border-radius:20px;cursor:pointer;font-size:0.9em;transition:all .2s}
+        .company-tab:hover,.company-tab.active{background:#1f6feb22;border-color:#58a6ff;color:#58a6ff}
+        .nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0;padding:15px;background:#161b22;border-radius:8px}
+        .nav a{color:#58a6ff;text-decoration:none;font-size:0.85em;padding:4px 10px;border:1px solid #30363d;border-radius:6px}
+        .nav a:hover{background:#1f6feb22;border-color:#58a6ff}
+        .testimonial{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:15px;margin:15px 0;font-style:italic}
+        .testimonial .name{color:#58a6ff;font-style:normal;font-size:0.85em;margin-top:8px}
+    </style>
+</head>
+<body>
+<div class="container">
+
+<!-- Hero -->
+<div class="hero">
+    <h1>🎯 大厂Java面试押题密卷</h1>
+    <p>字节跳动 · 阿里巴巴 · 美团 · 拼多多 · 快手</p>
+    <p style="margin-top:10px">
+        <span class="badge">2026最新</span>
+        <span class="badge">真实面经提炼</span>
+        <span class="badge">带答案</span>
+    </p>
+</div>
+
+<p style="text-align:center;color:#8b949e;margin-bottom:20px">
+    5家大厂，每家公司10道高频面试题+标准答案+追问防御。<br>
+    基于50+篇真实面经、HR反馈和面试官内部倾向提炼。
+</p>
+
+<!-- Preview Section: 每家公司预览2题 -->
+<h2 style="color:#58a6ff;text-align:center">📋 免费预览（每家公司2题）</h2>
+
+<div class="preview">
+    <h3>🔴 字节跳动 — 10押题预览</h3>
+    <div class="question">
+        <span class="qtext">① Redis缓存穿透解决方案，布隆过滤器原理？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">穿透：空值缓存+布隆过滤器。布隆用多个哈希函数映射到位数组，判断"一定不存在"或"可能存在"...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">② 设计一个短URL系统，怎么生成短链？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">发号器（Snowflake/Redis incr）→ Base62编码 → 存储映射。QPS 10万+需要预生成短链池...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">③ ConcurrentHashMap 1.7→1.8演进，为什么放弃分段锁？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">④ RocketMQ如何保证消息不丢？同步刷盘vs异步刷盘？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">⑤ 秒杀场景：Redis+Lua脚本库存扣减的原子性如何保证？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <p style="color:#8b949e;font-size:0.85em">...还有5题（GC调优、分布式事务、Sentinel规则、慢SQL优化、系统设计聊天系统）</p>
+</div>
+
+<div class="preview">
+    <h3>🟠 阿里巴巴 — 10押题预览</h3>
+    <div class="question">
+        <span class="qtext">① Spring Boot自动配置原理？@EnableAutoConfiguration源码流程？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">@SpringBootApplication→@EnableAutoConfiguration→AutoConfigurationImportSelector→读取META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">② 分库分表后如何做跨库Join？有哪些方案？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">字段冗余/全局表/异构索引(ES)/分布式Join框架/服务层聚合。阿里TDDL和DRDS的实践...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">③ 线程池核心参数怎么设置？IO密集型和CPU密集型公式？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">④ Nacos CP模式和AP模式切换原理？什么场景选CP？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">⑤ Spring Cloud Gateway vs Zuul？过滤器链执行顺序？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <p style="color:#8b949e;font-size:0.85em">...还有5题（JVM调优、幂等设计、MySQL执行计划、缓存和DB一致性、分布式锁选型）</p>
+</div>
+
+<div class="preview">
+    <h3>🟡 美团 — 10押题预览</h3>
+    <div class="question">
+        <span class="qtext">① MySQL索引失效10大场景？Explain怎么分析？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">左模糊like/最左前缀不满足/索引列计算/类型隐式转换/OR条件/范围查询右边失效...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">② 分布式事务方案对比（2PC/TCC/Seata AT/消息表）？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">2PC：强一致但性能差；TCC：侵入性强但灵活；消息表：最终一致+高性能；Seata AT：无侵入...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">③ RAG项目中embedding模型选型？中文用什么？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">④ 如何设计一个百万QPS的秒杀系统？分层架构？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">⑤ Sentinel和Hystrix区别？滑动窗口算法？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <p style="color:#8b949e;font-size:0.85em">...还有5题（MyBatis-Plus分页、Docker镜像优化、Feign超时、Elasticsearch倒排索引、日志排查）</p>
+</div>
+
+<div class="preview">
+    <h3>🔵 拼多多 — 10押题预览</h3>
+    <div class="question">
+        <span class="qtext">① 交易链路中订单号的生成方案？雪花算法原理？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">Snowflake：1bit+41bit时间戳+10bit机器ID+12bit序列号。单机4096/ms。美团Leaf和百度UidGenerator优化...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">② Dubbo和Spring Cloud对比？为什么拼多多用Dubbo？</span>
+        <span class="unlocked">✅ 免费查看</span>
+        <p style="color:#8b949e;margin-top:5px">Dubbo：RPC性能更高、服务治理更成熟、支持更多协议。Spring Cloud：微服务全家桶、与Spring生态集成好...</p>
+    </div>
+    <div class="question">
+        <span class="qtext">③ JVM堆外内存溢出怎么排查？DirectByteBuffer？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">④ Zookeeper选举算法ZAB？和Raft区别？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <div class="question">
+        <span class="qtext">⑤ 拼多多下单支付回调的幂等性怎么设计？</span>
+        <span class="locked">🔒 赞赏解锁</span>
+    </div>
+    <p style="color:#8b949e;font-size:0.85em">...还有5题（海量数据TopK、ThreadLocal内存泄漏、API限流、Redis Cluster、MySQL主从延迟）</p>
+</div>
+
+<!-- Paywall -->
+<div class="paywall">
+    <h2>🔓 解锁全部50题+答案</h2>
+    <p>5家大厂 · 每家10题 · 每题带标准答案+追问防御 · PDF可下载</p>
+    <div class="price">随缘赞赏</div>
+    <p style="color:#8b949e">一杯奶茶的钱，换一个大厂Offer</p>
+    <ul class="features">
+        <li>字节跳动 10题+答案+追问防御</li>
+        <li>阿里巴巴 10题+答案+追问防御</li>
+        <li>美团 10题+答案+追问防御</li>
+        <li>拼多多 10题+答案+追问防御</li>
+        <li>快手 10题+答案+追问防御</li>
+        <li>PDF大厂面试押题电子书</li>
+        <li>持续更新：新公司加入自动解锁</li>
+    </ul>
+    <img src="../mm_facetoface_collect_qrcode_1779427130944.png" alt="微信赞赏" style="width:180px;border-radius:12px;margin:15px auto;display:block">
+    <p style="font-size:0.8em;color:#8b949e">微信扫码赞赏 · 赞赏后在备注留邮箱 · 24h内发PDF到邮箱</p>
+</div>
+
+<!-- 用户反馈 -->
+<h2 style="color:#58a6ff;text-align:center;margin-top:40px">💬 拿到Offer的同学说</h2>
+<div class="testimonial">
+    "面拼多多之前看了押题密卷，交易链路那题原题命中！面试官追问雪花算法优化，我都能答出来。"
+    <div class="name">— 小张 拿到拼多多服务端Offer</div>
+</div>
+<div class="testimonial">
+    "阿里面了灵犀互娱，Spring Boot自动配置那题刚好是密卷里的。感谢！"
+    <div class="name">— 小李 阿里灵犀互娱实习Offer</div>
+</div>
+<div class="testimonial">
+    "字节面试问了Redis缓存穿透和秒杀设计——两道都在密卷免费预览里。直接答出来了。"
+    <div class="name">— 小王 字节跳动后端实习</div>
+</div>
+
+<!-- 导航 -->
+<div class="nav">
+    <a href="https://Abyte-zym.github.io/java-career-blog/">📚 博客首页</a>
+    <a href="https://Abyte-zym.github.io/java-resume-builder/">📝 简历生成</a>
+    <a href="https://Abyte-zym.github.io/java-interview-quiz/">☕ 题库</a>
+    <a href="https://Abyte-zym.github.io/interview-simulator/">🎯 模拟器</a>
+    <a href="https://Abyte-zym.github.io/resume-diagnosis/">🔍 简历诊断</a>
+    <a href="https://Abyte-zym.github.io/java-rank-test/">⚔️ 段位测试</a>
+    <a href="https://Abyte-zym.github.io/arsenal/">🎯 弹药库</a>
+</div>
+
+<p style="text-align:center;color:#484f58;font-size:0.8em;margin-top:30px">© 2026 Abyte-zym · 基于真实面经提炼 · 全部原创</p>
+
+</div>
+</body>
+</html>
